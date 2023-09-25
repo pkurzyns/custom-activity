@@ -16,6 +16,7 @@
         "express-session": "^1.17.2",
         "google-libphonenumber": "^3.2.22",
         "helmet": "^4.6.0",
+        "heroku": "^8.4.3",
         "ioredis": "^4.27.7",
         "jsforce": "^1.10.1",
         "jsonwebtoken": "^8.5.1",
