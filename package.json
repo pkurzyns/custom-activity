@@ -71,7 +71,7 @@
         "build": "webpack --config webpack.config.js",
         "build:cert": "cd certificates && buildCert.bat",
         "lint": "eslint -c .eslintrc.json",
-        "watch": "run-p watch:client watch:server",
+        "watch": "set NODE_OPTIONS=--openssl-legacy-provider && run-p watch:client watch:server",
         "watch:client": "webpack --watch --config webpack.config.js --progress",
         "watch:server": "nodemon",
         "start": "node src/server/api.js",
