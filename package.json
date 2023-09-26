@@ -68,13 +68,13 @@
     },
     "repository": "https://github.com/Accenture/sfmc-customapp",
     "scripts": {
-        "build": "webpack --config webpack.config.js",
+        "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config webpack.config.js",
         "build:cert": "cd certificates && buildCert.bat",
         "lint": "eslint -c .eslintrc.json",
         "watch": "set NODE_OPTIONS=--openssl-legacy-provider && run-p watch:client watch:server",
         "watch:client": "webpack --watch --config webpack.config.js --progress",
         "watch:server": "nodemon",
-        "start": "node src/server/api.js",
+        "start": "set NODE_OPTIONS=--openssl-legacy-provider && node src/server/api.js",
         "prettier": "prettier --write \"**/*.js\""
     }
 }
