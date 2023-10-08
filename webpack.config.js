@@ -15,7 +15,8 @@ const config = {
     mode: 'production',
     output: {
         path: path.resolve('dist'),
-        filename: './[name].js'
+        filename: './[name].js',
+        hashFunction: "xxhash64"
     },
     plugins: [
         new CleanWebpackPlugin(),

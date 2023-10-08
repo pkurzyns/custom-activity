@@ -41,7 +41,7 @@
         "npm-run-all": "^4.1.5",
         "postmonger": "0.0.16",
         "prettier": "^2.3.2",
-        "webpack": "5.50.0",
+        "webpack": "5.54.0",
         "webpack-cli": "^4.8.0"
     },
     "engines": {
@@ -68,13 +68,13 @@
     },
     "repository": "https://github.com/Accenture/sfmc-customapp",
     "scripts": {
-        "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config webpack.config.js",
+        "build": "webpack --config webpack.config.js",
         "build:cert": "cd certificates && buildCert.bat",
         "lint": "eslint -c .eslintrc.json",
-        "watch": "set NODE_OPTIONS=--openssl-legacy-provider && run-p watch:client watch:server",
+        "watch": "run-p watch:client watch:server",
         "watch:client": "webpack --watch --config webpack.config.js --progress",
         "watch:server": "nodemon",
-        "start": "set NODE_OPTIONS=--openssl-legacy-provider && node src/server/api.js",
+        "start": "node src/server/api.js",
         "prettier": "prettier --write \"**/*.js\""
     }
 }
